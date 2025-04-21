@@ -1,0 +1,127 @@
+@use "../helpers" as *;
+
+.header {
+    background-color: var(--color-second-bg);
+    position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+    &-inner {
+        &__left,
+        &__right {
+            width: 50%;
+            @include tablet {
+                width: 100%;
+            }
+        }
+
+        &__img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            object-fit: cover;
+            img {
+                @include desktop {
+                    width: rem(600);
+                    height: rem(950);
+                }
+
+                @include laptop {
+                    width: rem(450);
+                    height: rem(860);
+                }
+            }
+
+            @include tablet {
+                display: none;
+            }
+        }
+
+        &__top {
+            padding-block: rem(30);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 1rem;
+
+            @include mobile {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                row-gap: 1rem;
+            }
+        }
+
+        &__bottom-title {
+            margin-top: rem(100);
+
+            @include mobile {
+                margin-top: rem(10);
+            }
+        }
+
+        &__bottom-second-title {
+            margin-top: rem(50);
+            margin-bottom: rem(64);
+
+            @include mobile {
+                margin-top: rem(10);
+            }
+        }
+
+        &__bottom-text {
+            display: flex;
+            align-items: center;
+            gap: rem(12);
+            margin-top: rem(35);
+            line-height: 110%;
+
+            @include mobile {
+                margin-top: rem(50);
+                gap: rem(5);
+            }
+        }
+
+        &__bottom-figure {
+            @include fluid-text(40, 14);
+            display: inline-block;
+            font-family: var(--font-family-second);
+            line-height: 150%;
+        }
+
+        &__bottom-button {
+            margin-top: rem(40);
+            margin-bottom: rem(90);
+            font-weight: 700;
+            line-height: 150%;
+
+            @include desktop {
+                margin-bottom: rem(25);
+            }
+
+            @include mobile {
+                margin-bottom: rem(50);
+            }
+        }
+    }
+
+    &__menu {
+        &-list {
+            display: flex;
+            align-items: center;
+            column-gap: rem(16);
+        }
+
+        &-link {
+            @include fluid-text(16, 14);
+
+            padding: rem(14) rem(24);
+            font-family: var(--font-family);
+            font-style: italic;
+            line-height: 150%;
+            text-transform: uppercase;
+        }
+    }
+}

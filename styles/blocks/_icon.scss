@@ -1,0 +1,71 @@
+@use "../helpers" as *;
+
+.icon {
+    display: inline-flex;
+    align-items: center;
+    column-gap: rem(17);
+
+    &::after {
+        --size: #{rem(39)};
+
+        @include square(var(--size));
+
+        content: "";
+        flex-shrink: 0;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @include laptop {
+            --size: #{rem(20)};
+        }
+    }
+
+    &--header-check {
+        &::after {
+            background-image: url("../../icons/header_check.svg");
+        }
+    }
+
+    &--building-ico {
+        &::after {
+            background-image: url("../../icons/building_ico.svg");
+        }
+    }
+
+    &--social-media-ico1 {
+        &::after {
+            background-image: url("../../icons/social_media/1.svg");
+        }
+    }
+
+    &--social-media-ico2 {
+        &::after {
+            background-image: url("../../icons/social_media/2.svg");
+        }
+    }
+
+    &--social-media-ico3 {
+        &::after {
+            background-image: url("../../icons/social_media/3.svg");
+        }
+    }
+
+    &--social-media-ico4 {
+        &::after {
+            background-image: url("../../icons/social_media/4.svg");
+        }
+    }
+
+    &--social-media-ico5 {
+        &::after {
+            background-image: url("../../icons/social_media/5.svg");
+        }
+    }
+
+    &--social-media-ico6 {
+        &::after {
+            background-image: url("../../icons/social_media/6.svg");
+        }
+    }
+}

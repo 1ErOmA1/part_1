@@ -1,0 +1,10 @@
+@use "../helpers" as *;
+
+.logo {
+    max-width: fluid(154, 126);
+
+    font-family: var(--font-family-second);
+    @include fluid-text(34, 20);
+    line-height: 150%;
+    text-transform: uppercase;
+}

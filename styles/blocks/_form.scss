@@ -1,0 +1,100 @@
+@use "../helpers" as *;
+
+.form {
+    &__main {
+        display: flex;
+        width: 100%;
+        border: 2px solid var(--color-gray);
+        border-radius: 30px;
+        background: var(--color-white);
+        margin: rem(100) auto;
+    }
+
+    &__main-info {
+        width: 60%;
+        margin: 0 auto;
+        padding: rem(71) rem(55) rem(71) rem(134);
+
+        @include desktop {
+            width: 100%;
+        }
+
+        @include laptop {
+            padding: rem(61) rem(55) rem(61) rem(55);
+        }
+
+        @include mobile-s {
+            padding: rem(10);
+        }
+    }
+
+    &__main-info-title {
+        margin-bottom: rem(45);
+        color: var(--color-dark-green);
+        font-family: var(--font-family-second);
+    }
+
+    &__main-info-contact {
+        display: flex;
+        flex-direction: column;
+        gap: rem(13);
+    }
+
+    &__input {
+        padding: rem(13) rem(20) rem(13) rem(38);
+        border: 2px solid #d6d6d6;
+        border-radius: 4px;
+        outline: none;
+        height: rem(65);
+
+        &::placeholder {
+            transition: opacity 0.3s ease;
+        }
+
+        &:focus::placeholder {
+            opacity: 0;
+        }
+    }
+
+    &__main-info-checkbox {
+        margin-top: rem(10);
+        display: flex;
+        align-items: center;
+        gap: rem(16);
+        color: #55565a;
+    }
+
+    &__checkbox-input {
+        width: rem(24);
+        height: rem(24);
+    }
+
+    &__checkbox-label {
+        @include fluid-text(19, 14);
+
+        display: inline-block;
+        line-height: 130%;
+        color: #55565a;
+    }
+
+    &__main-info-button {
+        margin-top: rem(10);
+        color: #fff;
+        background: #282829;
+        padding: rem(32) 0;
+    }
+
+    &__main-img {
+        width: 40%;
+
+        img {
+            width: rem(600);
+            height: rem(628);
+        }
+
+        @include laptop {
+            width: 0%;
+            display: none;
+        }
+    }
+}

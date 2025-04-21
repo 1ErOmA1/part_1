@@ -1,0 +1,122 @@
+@use "../helpers" as *;
+
+.building {
+    position: relative;
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: rem(100);
+    margin-bottom: rem(220);
+
+    @include ultra {
+        margin-bottom: rem(160);
+    }
+
+    @include desktop {
+        margin-bottom: rem(0);
+    }
+
+    &__main-left-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+
+        @include tablet {
+            position: block;
+        }
+
+        img {
+            width: rem(598);
+            height: rem(724);
+
+            @include ultra {
+                width: rem(490);
+                height: rem(624);
+            }
+
+            @include desktop {
+                width: rem(390);
+                height: rem(520);
+            }
+
+            @include laptop {
+                width: rem(280);
+                height: rem(404);
+            }
+
+            @include tablet {
+                display: none;
+            }
+        }
+    }
+
+    &__main-right-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        object-fit: cover;
+
+        img {
+            width: rem(598);
+            height: rem(724);
+
+            @include ultra {
+                width: rem(490);
+                height: rem(624);
+            }
+
+            @include desktop {
+                width: rem(390);
+                height: rem(520);
+            }
+
+            @include laptop {
+                width: rem(280);
+                height: rem(404);
+            }
+
+            @include tablet {
+                display: none;
+            }
+        }
+    }
+
+    &__main-info {
+        max-width: 614px;
+        margin: 0 auto;
+        width: 100%;
+
+        @include laptop {
+            max-width: 414px;
+        }
+    }
+
+    &__main-info-text {
+        display: flex;
+        align-items: flex-start;
+        gap: rem(20);
+        padding: rem(31) 0;
+        border-bottom: 1px solid var(--color-light-gray);
+        line-height: 140%;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        @include laptop {
+            gap: rem(5);
+            padding: rem(15) 0;
+        }
+    }
+
+    &__main-info-button {
+        width: 100%;
+        padding: rem(32) rem(0);
+
+        @include laptop {
+            padding: rem(20) rem(0);
+        }
+    }
+}
